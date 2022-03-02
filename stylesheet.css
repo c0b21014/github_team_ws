@@ -1,10 +1,12 @@
 body {
     font-family: serif;
+    font-size: x-large;
     color: #aa78a6;
     background-color: #333;
 }
 h1 {
-    color: #55d6c2
+    font-size: xx-large;
+    color: #55d6c2;
 }
 table,
 td {
