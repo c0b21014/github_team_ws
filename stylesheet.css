@@ -13,3 +13,10 @@ td {
     border: 1px solid #55d6c2;
     background-color: #fdffff;
 }
+.btn {
+    border-radius: 5px;
+    background-color: lightblue;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+  }
