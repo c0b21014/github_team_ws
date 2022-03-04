@@ -1,207 +1,255 @@
-:root{
-    --blue:#94adb8;
-    --pink:#e65252;
-    --orange:#F8A055;
-    
-    --ban-size:400px;
-    --ban-teihen-width:108px;
-  }
-  body{
-    overflow:hidden;
-  }
-  div{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-  }
-  
-  h1{
-    font-size:100%;
-    margin-top:0;
-  }
-  
-  @keyframes roulette{
-    0%{
-      transform:rotate(0deg);
-    }
-    50%{
-      transform:rotate(180deg);
-    }
-    100%{
-      transform:rotate(360deg);
-    }
-  }
-  
-  @keyframes roulettehari{
-    0%{
-      border-top-color: rgba(248,160,85,1);
-    }
-    50%{
-      border-top-color: rgba(248,201,85,1);
-    }
-    100%{
-      border-top-color: rgba(248,160,85,1);
-    }
-  }
-  @keyframes roulettebtn{
-    0%{
-      background: rgba(248,160,85,1);
-    }
-    50%{
-      background: rgba(248,201,85,1);
-    }
-    100%{
-      background: rgba(248,160,85,1);
-    }
-  }
-  h1{ text-align:center; }
-  #roulette{
-    width:var(--ban-size);
-    margin:0 auto;
-  }
-  
-  /* ルーレットのボタン */
-  .act-start{
-    display:block;
-    margin-bottom:40px;
-    margin-right:auto;
-    margin-left:auto;
-    width:calc(var(--ban-size) * 0.7);
-    height:1.8em;
-    border-radius:0.25em;
-    padding:20px;
-    background:var(--orange);
-    animation:roulettebtn 0.5s ease-in infinite ;
-    animation-play-state:paused;
-  }
-  .start_btn:checked + .act-start{
-    animation-play-state:running;
-  }
-  .act-start span,
-  .start_btn + .act-start span:before{
-    display:block;
-    width:100%; height:100%;
-    
-  }
-  .start_btn{
-    display:none;
-  }
-  .start_btn + .act-start span:before{
-    content:"スタート！";
-    line-height:1.8em;
-    vertical-align:middle;
-    text-align:center;
-  }
-  
-  .start_btn:checked + .act-start span:before{
-    content:"ストップ！";
-  }
-  
-  
-  #roulette .rltt-body{
-    position:relative;
-    width:var(--ban-size);
-  }
-  /* ルーレットの針 */
-  #roulette .hari{
-    position:absolute;
-    margin-right:auto;
-    margin-left:auto;
-    right:0; left:0;
-    top:-20px; bottom:0;
-    z-index:10;
-    width:0; height:0;
-    border-left:10px solid transparent;
-    border-right:10px solid transparent;
-    border-top:80px solid var(--orange);
-    animation:roulettehari 0.5s ease-in infinite;
-    animation-play-state:paused;
-  }
-  
-  #roulette .start_btn:checked + .act-start + .rltt-body .hari{
-    animation-play-state:running;
-  }
-  
-  #roulette .rltt{
-    position:relative;
-    width:var(--ban-size);
-    height:var(--ban-size);
-    overflow:hidden;
-    background:#fff;
-    border-radius:var(--ban-size);
-    animation:
-      roulette 1s linear forwards infinite,
-      neonshadow 1s linear infinite;
-    animation-play-state:paused;
-  }
-  
-  #roulette .start_btn:checked + .act-start + .rltt-body .rltt{
-    animation-play-state:running;
-  }
-  
-  #roulette .rltt .ban,
-  #roulette .rltt .labelgroup{
-    position:absolute;
-    top:0; bottom:0;
-    left:0; right:0;
-    margin:auto;
-    height:var(--ban-size);
-    width:var(--ban-teihen-width);
-  }
-  
-  /* ★のラベルを配置したい */
-  #roulette .rltt .labelgroup div{
-    margin:0;
-    height:calc(var(--ban-size) / 2);
-    text-align:center;
-    padding-top:0.5em;
-    opacity:0.5;
-    font-size:120%;
-    color:#fff;
-  }
-  #roulette .rltt .labelgroup div:nth-child(2){
-    transform:rotate(180deg);
-  }
-  
-  #roulette .rltt .labelgroup:nth-child(1){ transform:rotate(0deg); }
-  #roulette .rltt .labelgroup:nth-child(2){ transform:rotate(60deg); }
-  #roulette .rltt .labelgroup:nth-child(3){ transform:rotate(120deg); }
-  
-  
-  #roulette .rltt .ban:before{
-    content:"";
-    display:block;
-    width:0;
-    height:0;
-    border-left:calc(var(--ban-teihen-width) / 2) solid transparent;
-    border-right:calc(var(--ban-teihen-width) / 2) solid transparent;
-    border-top:calc(var(--ban-size) / 2) solid var(--pink);
-    
-  }
-  #roulette .rltt .ban:after{
-    content:"";
-    display:block;
-    width:0;
-    height:0;
-    border-left:calc(var(--ban-teihen-width) / 2) solid transparent;
-    border-right:calc(var(--ban-teihen-width) / 2) solid transparent;
-    border-bottom:calc(var(--ban-size) / 2) solid var(--pink);
-    
-  }
-  
-  /* 青の盤の場合は色を変更する */
-  #roulette .rltt .ban.blue:before{ border-top-color:var(--blue); }
-  #roulette .rltt .ban.blue:after{ border-bottom-color:var(--blue); }
-  
-  
-  /* 回転させる */
-  #roulette .rltt .ban:nth-child(2){transform:rotate(30deg);}
-  #roulette .rltt .ban:nth-child(3){transform:rotate(60deg);}
-  #roulette .rltt .ban:nth-child(4){transform:rotate(90deg);}
-  #roulette .rltt .ban:nth-child(5){transform:rotate(120deg);}
-  #roulette .rltt .ban:nth-child(6){transform:rotate(150deg);}
+:root {
+    --blue: #c0c0c0;
+    --pink: rgb(173, 171, 56);
+    --orange: #F8A055;
+    --ban-size: 400px;
+    --ban-teihen-width: 108px;
+}
 
-  a {
+body {
+    overflow: hidden;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 100%;
+    margin-top: 0;
+}
+
+@keyframes roulette {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes roulettehari {
+    0% {
+        border-top-color: rgba(248, 160, 85, 1);
+    }
+    50% {
+        border-top-color: rgba(248, 201, 85, 1);
+    }
+    100% {
+        border-top-color: rgba(248, 160, 85, 1);
+    }
+}
+
+@keyframes roulettebtn {
+    0% {
+        background: rgba(248, 160, 85, 1);
+    }
+    50% {
+        background: rgba(248, 201, 85, 1);
+    }
+    100% {
+        background: rgba(248, 160, 85, 1);
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+#roulette {
+    width: var(--ban-size);
+    margin: 0 auto;
+}
+
+
+/* ルーレットのボタン */
+
+.act-start {
+    display: block;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    width: calc(var(--ban-size) * 0.7);
+    height: 1.8em;
+    border-radius: 0.25em;
+    padding: 20px;
+    background: var(--orange);
+    animation: roulettebtn 0.5s ease-in infinite;
+    animation-play-state: paused;
+}
+
+.start_btn:checked+.act-start {
+    animation-play-state: running;
+}
+
+.act-start span,
+.start_btn+.act-start span:before {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.start_btn {
+    display: none;
+}
+
+.start_btn+.act-start span:before {
+    content: "スタート！";
+    line-height: 1.8em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.start_btn:checked+.act-start span:before {
+    content: "ストップ！";
+}
+
+#roulette .rltt-body {
+    position: relative;
+    width: var(--ban-size);
+}
+
+
+/* ルーレットの針 */
+
+#roulette .hari {
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    right: 0;
+    left: 0;
+    top: -20px;
+    bottom: 0;
+    z-index: 10;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 80px solid var(--orange);
+    animation: roulettehari 0.5s ease-in infinite;
+    animation-play-state: paused;
+}
+
+#roulette .start_btn:checked+.act-start+.rltt-body .hari {
+    animation-play-state: running;
+}
+
+#roulette .rltt {
+    position: relative;
+    width: var(--ban-size);
+    height: var(--ban-size);
+    overflow: hidden;
+    background: #fff;
+    border-radius: var(--ban-size);
+    animation: roulette 1s linear forwards infinite, neonshadow 1s linear infinite;
+    animation-play-state: paused;
+}
+
+#roulette .start_btn:checked+.act-start+.rltt-body .rltt {
+    animation-play-state: running;
+}
+
+#roulette .rltt .ban,
+#roulette .rltt .labelgroup {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: var(--ban-size);
+    width: var(--ban-teihen-width);
+}
+
+
+/* ★のラベルを配置したい */
+
+#roulette .rltt .labelgroup div {
+    margin: 0;
+    height: calc(var(--ban-size) / 2);
+    text-align: center;
+    padding-top: 0.5em;
+    opacity: 0.5;
+    font-size: 120%;
+    color: #fff;
+}
+
+#roulette .rltt .labelgroup div:nth-child(2) {
+    transform: rotate(180deg);
+}
+
+#roulette .rltt .labelgroup:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+#roulette .rltt .labelgroup:nth-child(2) {
+    transform: rotate(60deg);
+}
+
+#roulette .rltt .labelgroup:nth-child(3) {
+    transform: rotate(120deg);
+}
+
+#roulette .rltt .ban:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: calc(var(--ban-teihen-width) / 2) solid transparent;
+    border-right: calc(var(--ban-teihen-width) / 2) solid transparent;
+    border-top: calc(var(--ban-size) / 2) solid var(--pink);
+}
+
+#roulette .rltt .ban:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: calc(var(--ban-teihen-width) / 2) solid transparent;
+    border-right: calc(var(--ban-teihen-width) / 2) solid transparent;
+    border-bottom: calc(var(--ban-size) / 2) solid var(--pink);
+}
+
+
+/* 青の盤の場合は色を変更する */
+
+#roulette .rltt .ban.blue:before {
+    border-top-color: var(--blue);
+}
+
+#roulette .rltt .ban.blue:after {
+    border-bottom-color: var(--blue);
+}
+
+
+/* 回転させる */
+
+#roulette .rltt .ban:nth-child(2) {
+    transform: rotate(30deg);
+}
+
+#roulette .rltt .ban:nth-child(3) {
+    transform: rotate(60deg);
+}
+
+#roulette .rltt .ban:nth-child(4) {
+    transform: rotate(90deg);
+}
+
+#roulette .rltt .ban:nth-child(5) {
+    transform: rotate(120deg);
+}
+
+#roulette .rltt .ban:nth-child(6) {
+    transform: rotate(150deg);
+}
+
+a {
     font-size: x-large;
 }
 
@@ -211,4 +259,4 @@
     padding: 10px;
     text-decoration: none;
     color: white;
-  }
+}
