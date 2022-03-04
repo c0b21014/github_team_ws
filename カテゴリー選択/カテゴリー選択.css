@@ -16,14 +16,13 @@ td {
     background-color: #fdffff;
 }
 
-
 .btn {
     border-radius: 5px;
     background-color: rgb(67, 131, 153);
     padding: 10px;
     text-decoration: none;
     color: white;
-  }
+}
 
 
 /*RESTRANT*/
@@ -33,7 +32,7 @@ td {
     background-color: rgb(255, 255, 255);
     padding: 10px;
     text-decoration: none;
-    color: rgb(75, 223, 231);
+    color: rgb(51, 140, 145);
 }
 
 
@@ -44,7 +43,7 @@ td {
     background-color: rgb(255, 255, 255);
     padding: 10px;
     text-decoration: none;
-    color: rgb(13, 41, 43);
+    color: rgb(173, 171, 56);
 }
 
 
@@ -55,5 +54,5 @@ td {
     background-color: rgb(255, 255, 255);
     padding: 10px;
     text-decoration: none;
-    color: rgb(168, 37, 201);
+    color: rgb(126, 89, 40);
 }
