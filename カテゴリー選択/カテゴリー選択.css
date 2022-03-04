@@ -16,6 +16,14 @@ td {
     background-color: #fdffff;
 }
 
+.btn {
+    border-radius: 5px;
+    background-color: rgb(67, 131, 153);
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+  }
+
 .btn1 {
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
