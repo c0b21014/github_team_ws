@@ -16,10 +16,26 @@ td {
     background-color: #fdffff;
 }
 
-.btn {
+.btn1 {
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     padding: 10px;
     text-decoration: none;
     color: rgb(184, 249, 253);
+}
+
+.btn2 {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(13, 41, 43);
+}
+
+.btn3 {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(168, 37, 201);
 }
