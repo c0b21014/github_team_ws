@@ -4,19 +4,22 @@ body {
     color: #aa78a6;
     background-color: #333;
 }
+
 h1 {
     font-size: xx-large;
     color: #55d6c2;
 }
+
 table,
 td {
     border: 1px solid #55d6c2;
     background-color: #fdffff;
 }
+
 .btn {
     border-radius: 5px;
-    background-color: lightblue;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     text-decoration: none;
-    color: white;
-  }
+    color: rgb(184, 249, 253);
+}
