@@ -16,6 +16,9 @@ td {
     background-color: #fdffff;
 }
 
+
+/*RESTRANT*/
+
 .btn1 {
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
@@ -24,6 +27,9 @@ td {
     color: rgb(75, 223, 231);
 }
 
+
+/*SHOPPING*/
+
 .btn2 {
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
@@ -31,6 +37,9 @@ td {
     text-decoration: none;
     color: rgb(13, 41, 43);
 }
+
+
+/*CAFE*/
 
 .btn3 {
     border-radius: 5px;
