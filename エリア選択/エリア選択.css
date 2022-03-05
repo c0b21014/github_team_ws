@@ -1,31 +1,35 @@
 html {
     font-size: 100%;
 }
+
 body {
     line-height: 2;
     color: rgb(50, 74, 88);
 }
+
 a {
     text-decoration: none;
 }
-img{
+
+img {
     max-width: 100%;
 }
-#home{
-    background-image: linear-gradient(#f2f5ff,#d7fdf0);
+
+#home {
+    background-image: linear-gradient(#f2f5ff, #d7fdf0);
     min-height: 100vh;
 }
 
-
-.logo{
+.logo {
     width: 210px;
     margin-top: 14px;
 }
 
-.home-content{
+.home-content {
     text-align: center;
     margin-top: 10%;
 }
+
 .home-content p {
     font-size: 1.4rem;
     margin: 30px;
@@ -33,7 +37,7 @@ img{
 
 .page-title {
     font-size: 4.5rem;
-    font-family: 'Caveat', cursive;
+    font-family: 'HG正楷書体-PRO', cursive;
     text-transform: none;
     font-weight: bold;
 }
@@ -45,6 +49,7 @@ img{
     border-radius: 5px;
     padding: 18px 32px;
 }
+
 .b1:hover {
     background: #877191;
 }
@@ -56,10 +61,10 @@ img{
     border-radius: 5px;
     padding: 18px 32px;
 }
+
 .b2:hover {
     background: #94696c;
 }
-
 
 .b3 {
     font-size: 1.375rem;
@@ -68,6 +73,7 @@ img{
     border-radius: 5px;
     padding: 18px 32px;
 }
+
 .b3:hover {
     background: #609990;
 }
