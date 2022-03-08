@@ -1,0 +1,58 @@
+body {
+    font-family: serif;
+    font-size: x-large;
+    color: #aa78a6;
+    background-color: #333;
+}
+
+h1 {
+    font-size: xx-large;
+    color: #55d6c2;
+}
+
+table,
+td {
+    border: 1px solid #55d6c2;
+    background-color: #fdffff;
+}
+
+.btn {
+    border-radius: 5px;
+    background-color: rgb(67, 131, 153);
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+
+/*RESTRANT*/
+
+.btn1 {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(51, 140, 145);
+}
+
+
+/*SHOPPING*/
+
+.btn2 {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(173, 171, 56);
+}
+
+
+/*CAFE*/
+
+.btn3 {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(126, 89, 40);
+}
