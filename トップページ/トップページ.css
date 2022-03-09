@@ -1,7 +1,6 @@
 body{
     background-image: url("../画像/ルーレット透明背景.png"),url("../画像/街並み白背景.png");
     background-size: 200px;
-    
 }
 
 header {
@@ -17,12 +16,14 @@ header {
     left: 0; /* 左右の固定位置を左から0pxにする */
     display: flex; /* 中の要素を横並びにする */
     align-items: center; /* 中の要素を上下中央に並べる */
+    
 }
 
 
 
 header .gnav .menu {
     display: flex; /* 中の要素を横並びにする */
+    justify-content: right;
 }
 
 header .gnav .menu li {
@@ -37,6 +38,7 @@ head .gnav ul{text-align: right;}
 
 main {
     height: 100vw; /* スクロールの演出を見れるようにmainに高さを指定 */
+    margin-top: 70px;
 }
 
 .ルーレットと街並み{
