@@ -1,3 +1,60 @@
+body{
+    background-image: url("../画像/ルーレット透明背景.png"),url("../画像/街並み白背景.png");
+    background-size: 200px;
+}
+
+header {
+    padding-top: 90px; /* ヘッダーの後ろに要素が隠れないようにするため */
+    width: 100vw; /* 幅いっぱいを指定 */
+    height: 70px; /* 高さを50pxに指定 */
+    background: rgb(255, 255, 255); /* 背景色にグレーを指定 */
+    border-bottom: 1px solid rgb(233, 233, 233);
+    padding: 15px 0px 0px 20px; /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+    position: fixed; /* ウィンドウを基準に画面に固定 */
+    top: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    display: flex; /* 中の要素を横並びにする */
+    align-items: center; /* 中の要素を上下中央に並べる */
+    
+}
+
+
+
+header .gnav .menu {
+    display: flex; /* 中の要素を横並びにする */
+    justify-content: right;
+}
+
+header .gnav .menu li {
+    list-style: none; /* リストの[・]を消す */
+}
+
+header .gnav .menu li + li {
+    margin-left: 40px; /* メニューそれぞれに間隔をあけるため */
+}
+
+head .gnav ul{text-align: right;}
+
+main {
+    height: 100vw; /* スクロールの演出を見れるようにmainに高さを指定 */
+    margin-top: 70px;
+}
+
+.ルーレットと街並み{
+    position: relative;
+    width: 100%;
+}
+
+.ルーレット{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+a{text-decoration: none;}
+
+
 html {
     font-size: 100%;
 }
@@ -14,15 +71,10 @@ a {
 img {
     max-width: 100%;
 }
-
 #home {
-    background-image: linear-gradient(#f2f5ff, #d7fdf0);
-    min-height: 100vh;
-}
-
-.logo {
-    width: 210px;
-    margin-top: 14px;
+    background:#ffffff;
+    padding: 0px 0px 30px 0px;
+    margin:0px 100px 0px 100px;
 }
 
 .home-content {
