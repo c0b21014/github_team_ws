@@ -37,7 +37,7 @@ header .gnav .menu li + li {
 head .gnav ul{text-align: right;}
 
 main {
-    height: 100vw; /* スクロールの演出を見れるようにmainに高さを指定 */
+    /*height: 100vw; /* スクロールの演出を見れるようにmainに高さを指定 */
     margin-top: 70px;
 }
 
@@ -74,7 +74,7 @@ img {
 #home {
     background:#ffffff;
     padding: 0px 0px 30px 0px;
-    margin:0px 100px 0px 100px;
+    margin:0px 150px 0px 150px;
 }
 
 .home-content {
