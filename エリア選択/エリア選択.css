@@ -20,21 +20,24 @@ header {
 }
 
 
-
-header .gnav .menu {
-    display: flex; /* 中の要素を横並びにする */
-    justify-content: right;
+.menu {
+    display: flex;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+.menu li {
+    margin-left: 80px;
+}
+.menu a {
+    color:rgb(237, 100, 152)
+}
+.menu a:hover {
+    color:rgb(122, 121, 121)
 }
 
-header .gnav .menu li {
-    list-style: none; /* リストの[・]を消す */
-}
-
-header .gnav .menu li + li {
-    margin-left: 40px; /* メニューそれぞれに間隔をあけるため */
-}
-
-head .gnav ul{text-align: right;}
+nav ul{text-align: right;}
 
 main {
     /*height: 100vw; /* スクロールの演出を見れるようにmainに高さを指定 */
@@ -61,7 +64,7 @@ html {
 
 body {
     line-height: 2;
-    color: rgb(50, 74, 88);
+    color: rgb(40, 77, 99);
 }
 
 a {
@@ -72,26 +75,28 @@ img {
     max-width: 100%;
 }
 #home {
-    background:#ffffff;
+    background:#ffffffc7;
     padding: 0px 0px 30px 0px;
     margin:0px 150px 0px 150px;
 }
 
-.home-content {
-    text-align: center;
-    margin-top: 10%;
+.howto {
+    font-size: 1.4rem;
+    color: rgb(40, 77, 99);
+    margin-bottom: 80px;
 }
-
 .home-content p {
     font-size: 1.4rem;
-    margin: 30px;
+    font-family: sans-serif;
+    margin-bottom: 50px;
 }
 
 .page-title {
-    font-size: 4.5rem;
-    font-family: 'HG正楷書体-PRO', cursive;
+    font-size: 5.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-transform: none;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .b1 {
@@ -99,7 +104,8 @@ img {
     background: #dfb2f4;
     color: #fff;
     border-radius: 5px;
-    padding: 18px 32px;
+    padding: 28px 42px;
+    margin-right: 70px;
 }
 
 .b1:hover {
@@ -111,7 +117,8 @@ img {
     background: #f49097;
     color: #fff;
     border-radius: 5px;
-    padding: 18px 32px;
+    padding: 28px 42px;
+    margin-right: 70px;
 }
 
 .b2:hover {
@@ -123,7 +130,7 @@ img {
     background: #55d6c2;
     color: #fff;
     border-radius: 5px;
-    padding: 18px 32px;
+    padding: 28px 42px;
 }
 
 .b3:hover {
