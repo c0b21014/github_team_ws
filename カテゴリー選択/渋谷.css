@@ -1,13 +1,25 @@
 body {
     font-family: serif;
     font-size: x-large;
-    color: #aa78a6;
-    background-color: #333;
+    color: #a5a4a5;
+    background-image: url("../画像/ルーレット透明背景.png"),url("../画像/街並み白背景.png");
+    background-size: 200px;
 }
 
-h1 {
-    font-size: xx-large;
-    color: #55d6c2;
+.box3 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    background: #ffffffaf;/*背景色*/
+}
+.box3 h1 {
+    color: #dfb2f4;
+    margin: 0; 
+    padding: 0;
+}
+.box3 h3 {
+    color: #a5a4a5;
+    margin: 0; 
+    padding: 0;
 }
 
 table,
@@ -18,7 +30,7 @@ td {
 
 .btn {
     border-radius: 5px;
-    background-color: rgb(67, 131, 153);
+    background-color: rgb(180, 207, 214);
     padding: 10px;
     text-decoration: none;
     color: white;
@@ -32,7 +44,7 @@ td {
     background-color: rgb(255, 255, 255);
     padding: 10px;
     text-decoration: none;
-    color: rgb(51, 140, 145);
+    color: rgb(99, 207, 212);
 }
 
 
@@ -43,7 +55,7 @@ td {
     background-color: rgb(255, 255, 255);
     padding: 10px;
     text-decoration: none;
-    color: rgb(173, 171, 56);
+    color: rgb(223, 221, 116);
 }
 
 
