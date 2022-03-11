@@ -8,7 +8,7 @@
 
 body {
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(245, 235, 222);
 }
 
 div {
@@ -20,7 +20,7 @@ div {
 h1 {
     font-size: 100%;
     margin-top: 0;
-    color:#fff;
+    color:rgb(87, 60, 26);
 }
 
 @keyframes roulette {
