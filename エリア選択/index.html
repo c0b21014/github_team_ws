@@ -1,43 +1,141 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="ja">
-        <title>Let's Go To With Us!!</title>
-        <link rel="stylesheet" href="エリア選択.css">
-    </head>
-    <body>
-        <header>
-            <h1>
-                <a href="index.html" class="ヘッダーロゴ画像">
-                    <img src="../画像/ヘッダー画像.png" height="60px">
-                </a>
-            </h1>
-            <nav>
-                <ul class="menu">
-                    <li><a href="">○○について</a></li>
-                    <li><a href="">お知らせ</a></li>
-                </ul>
-            </nav>
-        </header>  
-        <!--
-            <div class="ルーレットと街並み">
-                <img src="../画像/街並み白背景.png" class="街並み" width="40%">
-                <img src="../画像/ルーレット透明背景.png" class="ルーレット" width="40%">
-            </div>
-        -->
-        <main>
-            <div id="home" class="">
-                <div class="home-content wrapper">
-                    <h2 class="page-title">Let's go out with us!!</h2>
-                    <h3 class="howto">エリアとジャンルを選んでルーレットを回すだけ！</h3>
-                    <p> ↓ ↓ エ リ ア を 選 ん で ね ↓ ↓ </p>
-                    <a class="b1" href="../カテゴリー選択/渋谷.html">渋谷</a>
-                    <a class="b2" href="../カテゴリー選択/原宿.html">原宿</a>
-                    <a class="b3" href="../カテゴリー選択/八王子.html">八王子</a>
-                </div><!-- /.home-content --> 
-            </div><!-- /#home -->  
-        </main>
-           
-    </body>
-</html>
+body{
+    background-image: url("../画像/ルーレット透明背景.png"),url("../画像/街並み白背景.png");
+    background-size: 200px;
+}
 
+header {
+    padding-top: 90px; /* ヘッダーの後ろに要素が隠れないようにするため */
+    width: 100vw; /* 幅いっぱいを指定 */
+    height: 70px; /* 高さを50pxに指定 */
+    background: rgb(255, 255, 255); /* 背景色にグレーを指定 */
+    border-bottom: 1px solid rgb(233, 233, 233);
+    padding: 15px 0px 0px 20px; /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+    position: fixed; /* ウィンドウを基準に画面に固定 */
+    top: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    display: flex; /* 中の要素を横並びにする */
+    align-items: center; /* 中の要素を上下中央に並べる */
+    
+}
+
+
+.menu {
+    display: flex;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-top: 34px;
+    list-style: none;
+}
+.menu li {
+    margin-left: 80px;
+}
+.menu a {
+    color:rgb(237, 100, 152)
+}
+.menu a:hover {
+    color:rgb(122, 121, 121)
+}
+
+nav ul{text-align: right;}
+
+main {
+    /*height: 100vw; /* スクロールの演出を見れるようにmainに高さを指定 */
+    margin-top: 100px;
+}
+
+.ルーレットと街並み{
+    position: relative;
+    width: 100%;
+}
+
+.ルーレット{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+a{text-decoration: none;}
+
+
+html {
+    font-size: 100%;
+    text-align: center;
+}
+
+body {
+    line-height: 2;
+    color: rgb(61, 62, 62);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+#home {
+    background:#ffffffc7;
+    padding: 0px 0px 30px 0px;
+    margin:0px 150px 0px 150px;
+}
+
+.howto {
+    font-size: 1.4rem;
+    color: rgb(142, 144, 145);
+    margin-bottom: 80px;
+}
+.home-content p {
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+}
+
+.page-title {
+    font-size: 5.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    text-transform: none;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(250, 108, 153);
+}
+
+.b1 {
+    font-size: 1.375rem;
+    background: #dfb2f4;
+    color: #fff;
+    border-radius: 5px;
+    padding: 28px 42px;
+    margin-right: 70px;
+}
+
+.b1:hover {
+    background: #877191;
+}
+
+.b2 {
+    font-size: 1.375rem;
+    background: #f49097;
+    color: #fff;
+    border-radius: 5px;
+    padding: 28px 42px;
+    margin-right: 70px;
+}
+
+.b2:hover {
+    background: #94696c;
+}
+
+.b3 {
+    font-size: 1.375rem;
+    background: #55d6c2;
+    color: #fff;
+    border-radius: 5px;
+    padding: 28px 42px;
+}
+
+.b3:hover {
+    background: #609990;
+}
